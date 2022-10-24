@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import BarChart from "./BarChart";
 
 
 const Homepage = () =>{
@@ -27,7 +28,7 @@ const Homepage = () =>{
     return(
         <div>
         
-
+            <BarChart harry_potter_data={data}/>
         </div>
     )
 }
