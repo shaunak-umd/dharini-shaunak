@@ -1,11 +1,14 @@
 import React from "react";
 import * as d3 from "d3";
 import { useD3Hook } from "../Hooks/useD3Hook";
+import {useRef } from "react";
 
 
 const BarChart = ({harry_potter_data}) =>{
 
     console.log(harry_potter_data);
+
+    const d3ref = useRef();
 
     
     
@@ -71,7 +74,8 @@ const d3BarChart = (data=alphabet, {
       title = i => T(O[i], i, data);
     }
   
-    const svg = d3.create("svg")
+    const svg = d3.select(d3ref.current)
+    // const svg = d3.create("svg")
         .attr("width", width)
         .attr("height", height)
         .attr("viewBox", [0, 0, width, height])
@@ -149,6 +153,7 @@ const d3BarChart = (data=alphabet, {
           <g className="x-axis" />
           <g className="y-axis" />
         </svg> */}
+          <svg ref={d3ref} />
         </div>
     )
 }
