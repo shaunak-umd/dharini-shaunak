@@ -119,7 +119,7 @@ const d3BarChart = (data=alphabet, {
     return svg.node();
   }
 
-  const chart = d3BarChart(alphabet, {
+  d3BarChart(alphabet, {
     x: d => d.letter,
     y: d => d.frequency,
     xDomain: d3.groupSort(alphabet, ([d]) => -d.frequency, d => d.letter), // sort by descending frequency
@@ -127,7 +127,7 @@ const d3BarChart = (data=alphabet, {
     yLabel: "↑ Frequency",
     width: 500,
     height: 500,
-    color: "steelblue"
+    color: "blue"
   });
 
   
