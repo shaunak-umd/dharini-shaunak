@@ -1,6 +1,5 @@
 import React from "react";
 import * as d3 from "d3";
-import { useD3Hook } from "../Hooks/useD3Hook";
 import {useRef } from "react";
 
 
@@ -131,7 +130,7 @@ const d3BarChart = (data=alphabet, {
     color: "steelblue"
   });
 
-  // const ref = useD3Hook(d3BarChart, 300);
+  
   
   // console.log(chart);
   // let ref = React.useRef();
