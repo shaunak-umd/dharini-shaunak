@@ -111,7 +111,6 @@
 
 
 import React from "react";
-import * as d3 from 'd3'
 
 const BarChart = ({harry_potter_data}) =>{
 
@@ -131,19 +130,15 @@ const BarChart = ({harry_potter_data}) =>{
 
   for (i=0; i<402; i++)
   {
-    //console.log(harry_potter_data[i] && harry_potter_data[i].dateOfBirth.substring(3,5));
 
     if (harry_potter_data[i] && harry_potter_data[i].dateOfBirth.substring(3,5)=== '01')
     countJan++;
 
-
     if (harry_potter_data[i] && harry_potter_data[i].dateOfBirth.substring(3,5)=== '02')
     countFeb++;
 
-
     if (harry_potter_data[i] && harry_potter_data[i].dateOfBirth.substring(3,5)=== '03')
     countMar++;
-
 
     if( harry_potter_data[i] && harry_potter_data[i].dateOfBirth.substring(3,5) === '04')
     countApr++;
@@ -151,54 +146,52 @@ const BarChart = ({harry_potter_data}) =>{
     if( harry_potter_data[i] && harry_potter_data[i].dateOfBirth.substring(3,5) === '05')
     countMay++;
 
-
     if( harry_potter_data[i] && harry_potter_data[i].dateOfBirth.substring(3,5) === '06')
     countJun++;
-
 
     if( harry_potter_data[i] && harry_potter_data[i].dateOfBirth.substring(3,5) === '07')
     countJul++;
 
-
     if( harry_potter_data[i] && harry_potter_data[i].dateOfBirth.substring(3,5) === '08')
     countAug++;
-
 
     if( harry_potter_data[i] && harry_potter_data[i].dateOfBirth.substring(3,5) === '09')
     countSep++;
 
-
     if( harry_potter_data[i] && harry_potter_data[i].dateOfBirth.substring(3,5) === '10')
     countOct++;
-
 
     if( harry_potter_data[i] && harry_potter_data[i].dateOfBirth.substring(3,5) === '11')
     countNov++;
 
-
     if( harry_potter_data[i] && harry_potter_data[i].dateOfBirth.substring(3,5) === '12')
     countDec++;
-
   }
 
-  console.log(countJan);
-  console.log(countFeb);
-  console.log(countMar);
-  console.log(countApr);
-  console.log(countMay);
-  console.log(countJun);
-  console.log(countJul);
-  console.log(countAug);
-  console.log(countSep);
-  console.log(countOct);
-  console.log(countNov);
-  console.log(countDec);
+  const birthMonthCount = [countJan, countFeb, countMar, countApr, countMay, countJun, countJul, countAug, countSep, countOct, countNov, countDec];
 
-    return(
-        <div>
-        barchart 
-        </div>
-    )
+  console.log(birthMonthCount);
+
+  const barChartData= [ {Month: "January", Count: countJan},
+                        {Month: "February", Count: countFeb},
+                        {Month: "March", Count: countMar},
+                        {Month: "April", Count: countApr},
+                        {Month: "May", Count: countMay},
+                        {Month: "June", Count: countJun},
+                        {Month: "July", Count: countJul},
+                        {Month: "August", Count: countAug},
+                        {Month: "September", Count: countSep},
+                        {Month: "October", Count: countOct},
+                        {Month: "November", Count: countNov},
+                        {Month: "December", Count: countDec}, ]
+
+  console.log(barChartData);
+
+  return(
+    <div>
+    barchart 
+    </div>
+  )
 }
 
 export default BarChart;
