@@ -208,28 +208,28 @@ const d3BarChart = (data=alphabet, {
 
   console.log(birthMonthCount);
 
-  const barChartData= [ {Month: "January", Count: countJan},
-                        {Month: "February", Count: countFeb},
-                        {Month: "March", Count: countMar},
-                        {Month: "April", Count: countApr},
+  const barChartData= [ {Month: "Jan", Count: countJan},
+                        {Month: "Feb", Count: countFeb},
+                        {Month: "Mar", Count: countMar},
+                        {Month: "Apr", Count: countApr},
                         {Month: "May", Count: countMay},
-                        {Month: "June", Count: countJun},
-                        {Month: "July", Count: countJul},
-                        {Month: "August", Count: countAug},
-                        {Month: "September", Count: countSep},
-                        {Month: "October", Count: countOct},
-                        {Month: "November", Count: countNov},
-                        {Month: "December", Count: countDec}, ]
+                        {Month: "Jun", Count: countJun},
+                        {Month: "Jul", Count: countJul},
+                        {Month: "Aug", Count: countAug},
+                        {Month: "Sep", Count: countSep},
+                        {Month: "Oct", Count: countOct},
+                        {Month: "Nov", Count: countNov},
+                        {Month: "Dec", Count: countDec}, ]
 
   console.log(barChartData);
 
 
 
 
-  d3BarChart(alphabet, {
-    x: d => d.letter,
-    y: d => d.frequency,
-    xDomain: d3.groupSort(alphabet, ([d]) => -d.frequency, d => d.letter), // sort by descending frequency
+  d3BarChart(barChartData, {
+    x: d => d.Month,
+    y: d => d.Count,
+    xDomain: d3.groupSort(barChartData, ([d]) => -d.Count, d => d.Month), // sort by descending frequency
     yFormat: "%",
     yLabel: "↑ Frequency",
     width: 500,
