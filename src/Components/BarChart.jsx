@@ -41,20 +41,14 @@ const BarChart = ({harry_potter_data}) =>{
     
     
     
-    const alphabet = [
-      {letter: 'a', frequency:1},
-      {letter: 'b', frequency:5},
-      {letter: 'c', frequency:6},
-      {letter: 'd', frequency:2},
-      {letter: 'e', frequency:4}
-    ];
+    
 
     
     
     // Copyright 2021 Observable, Inc.
 // Released under the ISC license.
 // https://observablehq.com/@d3/bar-chart
-const d3BarChart = (data=alphabet, {
+const d3BarChart = (data, {
     x = (d, i) => i, // given d in data, returns the (ordinal) x-value
     y = d => d, // given d in data, returns the (quantitative) y-value
     title, // given d in data, returns the title text
