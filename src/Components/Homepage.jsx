@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import BarChart from "./BarChart";
+import BubbleChart from "./BubbleChart";
 
 
 const Homepage = () =>{
@@ -29,6 +30,8 @@ const Homepage = () =>{
         <div>
         
             <BarChart harry_potter_data={data}/>
+
+            <BubbleChart harry_potter_data={data} />
         </div>
     )
 }
