@@ -230,7 +230,7 @@ const d3BarChart = (data=alphabet, {
     x: d => d.Month,
     y: d => d.Count,
     // xDomain: d3.groupSort(barChartData, ([d]) => -d.Count, d => d.Month), // sort by descending frequency
-    yFormat: "%",
+    // yFormat: "%",
     yLabel: "↑ Frequency",
     width: 500,
     height: 500,
