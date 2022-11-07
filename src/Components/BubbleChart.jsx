@@ -32,14 +32,14 @@ const BubbleChart = ({harry_potter_data}) =>{
     // harry_potter_data.map( y => {
     //   console.log(y.hairColour);
     // });
-    const files = [
-      {id: "flare.analytics.cluster.AgglomerativeCluster", value: 3938} ,
-      {id: "flare.analytics.cluster.CommunityStructure", value: 3812} ,
-      {id: "flare.analytics.cluster.HierarchicalCluster", value: 6714} ,
-      {id: "flare.analytics.graph.LinkDistance", value: 5731} ,
-      {id: "flare.animate.interpolate.ArrayInterpolator", value: 1983}
+    // const files = [
+    //   {id: "flare.analytics.cluster.AgglomerativeCluster", value: 3938} ,
+    //   {id: "flare.analytics.cluster.CommunityStructure", value: 3812} ,
+    //   {id: "flare.analytics.cluster.HierarchicalCluster", value: 6714} ,
+    //   {id: "flare.analytics.graph.LinkDistance", value: 5731} ,
+    //   {id: "flare.animate.interpolate.ArrayInterpolator", value: 1983}
 
-    ];
+    // ];
     // Copyright 2021 Observable, Inc.
 // Released under the ISC license.
 // https://observablehq.com/@d3/bubble-chart
@@ -109,11 +109,34 @@ function d3BubbleChart(data, {
       .attr("target", link == null ? null : linkTarget)
       .attr("transform", d => `translate(${d.x},${d.y})`);
 
+
+  let colour_mapping = new Map();
+  colour_mapping.set('orange','#ffb04c');
+  colour_mapping.set('grey','#bdbdbd');
+  colour_mapping.set('black','#9e9e9e');
+  colour_mapping.set('red','#ef5350');
+  colour_mapping.set('amber','#fbc02d');
+  colour_mapping.set('yellowish','#fff176');
+  colour_mapping.set('brown','#8d6e63');
+  colour_mapping.set('green','#9ccc65');
+  colour_mapping.set('hazel','#bcaaa4');
+  colour_mapping.set('pale, silvery','#f5f5f5');
+  colour_mapping.set('blue','#42a5f5');
+  colour_mapping.set('yellow','#fff9c4');
+  colour_mapping.set('white','#ffffff');
+  colour_mapping.set('dark','#757575');
+
+
+  
+
+  console.log(colour_mapping.get('red'));
+
   leaf.append("circle")
       .attr("stroke", stroke)
       .attr("stroke-width", strokeWidth)
       .attr("stroke-opacity", strokeOpacity)
-      .attr("fill", G ? d => color(G[d.data]) : fill == null ? "none" : fill)
+      .attr("fill", d => colour_mapping.get( L[d.data].split(/\r?\n/)[0]) )
+      // .attr("fill" , 'yellow')
       .attr("fill-opacity", fillOpacity)
       .attr("r", d => d.r);
 
