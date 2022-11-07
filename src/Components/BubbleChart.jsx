@@ -7,6 +7,31 @@ const BubbleChart = ({harry_potter_data}) =>{
 
     const d3ref = useRef();
 
+    let eyeColours = new Map();
+
+    harry_potter_data.map(x => {
+      if (x.eyeColour) {
+        let count = eyeColours.get(x.eyeColour);
+        if ( count ) {
+          count++;
+          eyeColours.set(x.eyeColour, count);
+        }
+        else {
+          eyeColours.set(x.eyeColour, 1);
+        }
+      }
+    });
+
+    // console.log(eyeColours);
+    // const array_of_eye_colours = [ {
+    //   ...eyeColours.keys() , ...eyeColours.values()
+    // }];
+    const array_of_eye_colours = Array.from(eyeColours, ([id, value]) => ({ id, value }));
+    console.log(array_of_eye_colours);
+
+    // harry_potter_data.map( y => {
+    //   console.log(y.hairColour);
+    // });
     const files = [
       {id: "flare.analytics.cluster.AgglomerativeCluster", value: 3938} ,
       {id: "flare.analytics.cluster.CommunityStructure", value: 3812} ,
