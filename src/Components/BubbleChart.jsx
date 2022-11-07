@@ -123,7 +123,7 @@ function d3BubbleChart(data, {
   colour_mapping.set('pale, silvery','#f5f5f5');
   colour_mapping.set('blue','#42a5f5');
   colour_mapping.set('yellow','#fff9c4');
-  colour_mapping.set('white','#ffffff');
+  colour_mapping.set('white','#fafafa');
   colour_mapping.set('dark','#757575');
 
 
