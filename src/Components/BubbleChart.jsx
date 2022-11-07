@@ -152,7 +152,7 @@ function d3BubbleChart(data, {
 
 
 
-d3BubbleChart(files, {
+d3BubbleChart(array_of_eye_colours, {
   label: d => [...d.id.split(".").pop().split(/(?=[A-Z][a-z])/g), d.value.toLocaleString("en")].join("\n"),
   value: d => d.value,
   group: d => d.id.split(".")[1],
