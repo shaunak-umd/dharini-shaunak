@@ -10,27 +10,26 @@ const Homepage = () =>{
 
     //component did mount
     useEffect(()=>{
-        (async() =>{
-            const data =  await getHarryPotterData();
-            setData(data);
-        })()
+    (async() =>{
+    const data =  await getHarryPotterData();
+    setData(data);
+    })()
         
     },[]);
 
     //get data from api
-    async function getHarryPotterData() {
+    async function getHarryPotterData() 
+    {
         const response = await fetch("https://hp-api.herokuapp.com/api/characters");
         //console.log(await response.json());
-         return response.json();
-      }
+        return response.json();
+    }
 
-    
-
-    return(
+    return
+    (
         <div>
-        
             <BarChart harry_potter_data={data}/>
-            <Scatterplot data={data}/>
+            <Scatterplot harry_potter_data={data}/>
         </div>
     )
 }
