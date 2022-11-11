@@ -3,14 +3,14 @@ import * as d3 from "d3";
 import {useRef } from "react";
 
 
-const Scatterplot = ({harry_potter_data}) =>{
+const ScatterPlot = ({harry_potter_data}) =>{
 
   const d3ref = useRef();
 
   // Copyright 2021 Observable, Inc.
   // Released under the ISC license.
   // https://observablehq.com/@d3/scatterplot
-  const d3Scatterplot =(data, {
+  const d3ScatterPlot =(data, {
     x = ([x]) => x, // given d in data, returns the (quantitative) x-value
     y = ([, y]) => y, // given d in data, returns the (quantitative) y-value
     r = 3, // (fixed) radius of dots, in pixels
@@ -60,67 +60,67 @@ const Scatterplot = ({harry_potter_data}) =>{
     const yAxis = d3.axisLeft(yScale).ticks(height / 50, yFormat);
 
     const svg = d3.create("svg")
-    .attr("width", width)
-    .attr("height", height)
-    .attr("viewBox", [0, 0, width, height])
-    .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
+      .attr("width", width)
+      .attr("height", height)
+      .attr("viewBox", [0, 0, width, height])
+      .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
 
     svg.append("g")
-    .attr("transform", `translate(0,${height - marginBottom})`)
-    .call(xAxis)
-    .call(g => g.select(".domain").remove())
-    .call(g => g.selectAll(".tick line").clone()
-    .attr("y2", marginTop + marginBottom - height)
-    .attr("stroke-opacity", 0.1))
-    .call(g => g.append("text")
-    .attr("x", width)
-    .attr("y", marginBottom - 4)
-    .attr("fill", "currentColor")
-    .attr("text-anchor", "end")
-    .text(xLabel));
+      .attr("transform", `translate(0,${height - marginBottom})`)
+      .call(xAxis)
+      .call(g => g.select(".domain").remove())
+      .call(g => g.selectAll(".tick line").clone()
+      .attr("y2", marginTop + marginBottom - height)
+      .attr("stroke-opacity", 0.1))
+      .call(g => g.append("text")
+      .attr("x", width)
+      .attr("y", marginBottom - 4)
+      .attr("fill", "currentColor")
+      .attr("text-anchor", "end")
+      .text(xLabel));
 
     svg.append("g")
-    .attr("transform", `translate(${marginLeft},0)`)
-    .call(yAxis)
-    .call(g => g.select(".domain").remove())
-    .call(g => g.selectAll(".tick line").clone()
-    .attr("x2", width - marginLeft - marginRight)
-    .attr("stroke-opacity", 0.1))
-    .call(g => g.append("text")
-    .attr("x", -marginLeft)
-    .attr("y", 10)
-    .attr("fill", "currentColor")
-    .attr("text-anchor", "start")
-    .text(yLabel));
+      .attr("transform", `translate(${marginLeft},0)`)
+      .call(yAxis)
+      .call(g => g.select(".domain").remove())
+      .call(g => g.selectAll(".tick line").clone()
+      .attr("x2", width - marginLeft - marginRight)
+      .attr("stroke-opacity", 0.1))
+      .call(g => g.append("text")
+      .attr("x", -marginLeft)
+      .attr("y", 10)
+      .attr("fill", "currentColor")
+      .attr("text-anchor", "start")
+      .text(yLabel));
 
     if (T) svg.append("g")
-    .attr("font-family", "sans-serif")
-    .attr("font-size", 10)
-    .attr("stroke-linejoin", "round")
-    .attr("stroke-linecap", "round")
+      .attr("font-family", "sans-serif")
+      .attr("font-size", 10)
+      .attr("stroke-linejoin", "round")
+      .attr("stroke-linecap", "round")
     .selectAll("text")
     .data(I)
     .join("text")
-    .attr("dx", 7)
-    .attr("dy", "0.35em")
-    .attr("x", i => xScale(X[i]))
-    .attr("y", i => yScale(Y[i]))
-    .text(i => T[i])
-    .call(text => text.clone(true))
-    .attr("fill", "none")
-    .attr("stroke", halo)
-    .attr("stroke-width", haloWidth);
+      .attr("dx", 7)
+      .attr("dy", "0.35em")
+      .attr("x", i => xScale(X[i]))
+      .attr("y", i => yScale(Y[i]))
+      .text(i => T[i])
+      .call(text => text.clone(true))
+      .attr("fill", "none")
+      .attr("stroke", halo)
+      .attr("stroke-width", haloWidth);
 
     svg.append("g")
-    .attr("fill", fill)
-    .attr("stroke", stroke)
-    .attr("stroke-width", strokeWidth)
+      .attr("fill", fill)
+      .attr("stroke", stroke)
+      .attr("stroke-width", strokeWidth)
     .selectAll("circle")
     .data(I)
     .join("circle")
-    .attr("cx", i => xScale(X[i]))
-    .attr("cy", i => yScale(Y[i]))
-    .attr("r", r);
+      .attr("cx", i => xScale(X[i]))
+      .attr("cy", i => yScale(Y[i]))
+      .attr("r", r);
 
     return svg.node();
   }
@@ -177,7 +177,7 @@ const Scatterplot = ({harry_potter_data}) =>{
 
   console.log(ScatterplotData);
 
-  d3Scatterplot(ScatterplotData, {
+  d3ScatterPlot(ScatterplotData, {
   x: d => d.Students,
   y: d => d.Girls,
   title: d => d.HouseName,
@@ -195,4 +195,4 @@ const Scatterplot = ({harry_potter_data}) =>{
   )
 }
 
-export default Scatterplot;
+export default ScatterPlot;

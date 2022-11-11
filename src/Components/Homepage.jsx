@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import BarChart from "./BarChart";
-import Scatterplot from "./Scatterplot";
+import ScatterPlot from "./ScatterPlot";
 
 
 const Homepage = () =>{
@@ -25,11 +25,10 @@ const Homepage = () =>{
         return response.json();
     }
 
-    return
-    (
+    return(
         <div>
             <BarChart harry_potter_data={data}/>
-            <Scatterplot harry_potter_data={data}/>
+            <ScatterPlot harry_potter_data={data}/>
         </div>
     )
 }
