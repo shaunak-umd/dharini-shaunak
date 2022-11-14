@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/dharini-shaunak/static/css/main.dbb6a937.css",
-    "main.js": "/dharini-shaunak/static/js/main.23f43daa.js",
+    "main.css": "/dharini-shaunak/static/css/main.8372f9c6.css",
+    "main.js": "/dharini-shaunak/static/js/main.72444cf0.js",
     "static/js/787.28cb0dcd.chunk.js": "/dharini-shaunak/static/js/787.28cb0dcd.chunk.js",
     "static/media/logo.svg": "/dharini-shaunak/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/dharini-shaunak/index.html",
-    "main.dbb6a937.css.map": "/dharini-shaunak/static/css/main.dbb6a937.css.map",
-    "main.23f43daa.js.map": "/dharini-shaunak/static/js/main.23f43daa.js.map",
+    "main.8372f9c6.css.map": "/dharini-shaunak/static/css/main.8372f9c6.css.map",
+    "main.72444cf0.js.map": "/dharini-shaunak/static/js/main.72444cf0.js.map",
     "787.28cb0dcd.chunk.js.map": "/dharini-shaunak/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dbb6a937.css",
-    "static/js/main.23f43daa.js"
+    "static/css/main.8372f9c6.css",
+    "static/js/main.72444cf0.js"
   ]
 }
