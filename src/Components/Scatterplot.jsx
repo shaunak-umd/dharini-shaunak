@@ -12,13 +12,13 @@ const ScatterPlot = ({harry_potter_data}) =>{
   // https://observablehq.com/@d3/scatterplot
   const d3ScatterPlot =(data, {
     x = ([x]) => x, // given d in data, returns the (quantitative) x-value
-    y = ([, y]) => y, // given d in data, returns the (quantitative) y-value
+    y = ([,y]) => y, // given d in data, returns the (quantitative) y-value
     r = 3, // (fixed) radius of dots, in pixels
     title, // given d in data, returns the title
     marginTop = 20, // top margin, in pixels
     marginRight = 30, // right margin, in pixels
     marginBottom = 30, // bottom margin, in pixels
-    marginLeft = 40, // left margin, in pixels
+    marginLeft = 50, // left margin, in pixels
     inset = r * 2, // inset the default range, in pixels
     insetTop = inset, // inset the default y-range
     insetRight = inset, // inset the default x-range
@@ -59,7 +59,7 @@ const ScatterPlot = ({harry_potter_data}) =>{
     const xAxis = d3.axisBottom(xScale).ticks(width / 80, xFormat);
     const yAxis = d3.axisLeft(yScale).ticks(height / 50, yFormat);
 
-    const svg = d3.create("svg")
+    const svg = d3.select(d3ref.current)
       .attr("width", width)
       .attr("height", height)
       .attr("viewBox", [0, 0, width, height])
@@ -175,6 +175,7 @@ const ScatterPlot = ({harry_potter_data}) =>{
     {HouseName: "Ravenclaw", Students: countRavenclaw, Girls: countRaveGirls}
   ]
 
+
   console.log(ScatterplotData);
 
   d3ScatterPlot(ScatterplotData, {
@@ -184,7 +185,7 @@ const ScatterPlot = ({harry_potter_data}) =>{
   xLabel: "Number of Students in Hogwarts Houses →",
   yLabel: "↑ Number of female wizards",
   stroke: "steelblue",
-  width: 240,
+  width: 500,
   height: 600
   });
 
