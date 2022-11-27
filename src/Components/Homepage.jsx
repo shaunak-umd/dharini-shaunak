@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import BarChart from "./BarChart";
 import BubbleChart from "./BubbleChart";
 import ScatterPlot from "./ScatterPlot";
+import CirclePacking from "./CirclePacking";
 
 
 const Homepage = () =>{
@@ -31,6 +32,7 @@ const Homepage = () =>{
             <BarChart harry_potter_data={data}/>
             <BubbleChart harry_potter_data={data}/>
             <ScatterPlot harry_potter_data={data}/>
+            <CirclePacking harry_potter_data={data}/>
         </div>
     )
 }
