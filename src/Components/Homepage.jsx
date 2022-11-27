@@ -28,7 +28,7 @@ const Homepage = () =>{
     }
 
     return(
-        <div>
+        <div className="bg-harry-potter">
             <BarChart harry_potter_data={data}/>
             <BubbleChart harry_potter_data={data}/>
             <ScatterPlot harry_potter_data={data}/>
