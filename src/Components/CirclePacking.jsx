@@ -1,134 +1,137 @@
 import React from "react";
 import * as d3 from "d3";
 import {useRef } from "react";
-// import {d3} from "@d3/zoomable-circle-packing";
 
 const CirclePacking = ({harry_potter_data}) =>{
 
-    const d3ref = useRef();
+  const d3ref = useRef();
 
-  //   const data = [
-  //     {name: "flare", 
-  //     children: [ 
-  //       {name: "sdgfd", value: 234} ,
-  //       {name: "dgfsgd" , children: [
-  //         {name: "dfg" , children: [
-  //           {name: "sohgjlghj", children: [
-  //             {name: "sdf", value: 324}
-  //           ]}
-  //         ]}
-  //       ] }
-  //     ] 
-  //   } ,
+  let i=0;
+  let j=0;
+  let countGryffindor=0;
+  let countHufflepuff=0;
+  let countRavenclaw=0;
+  let countSlytherin=0;
+  let countPureblood=0;
+  let countHalfblood=0;
+  let countMuggleborn=0;
+  let countMuggle=0;
+  let countPurebloodGryf=0
+  let countHalfbloodGryf=0
+  let countMugglebornGryf=0
+  let countMuggleGryf=0
+  let countPurebloodHuff=0
+  let countHalfbloodHuff=0
+  let countMugglebornHuff=0
+  let countMuggleHuff=0
+  let countPurebloodRavc=0
+  let countHalfbloodRavc=0
+  let countMugglebornRavc=0
+  let countMuggleRavc=0
+  let countPurebloodSlyt=0
+  let countHalfbloodSlyt=0
+  let countMugglebornSlyt=0
+  let countMuggleSlyt=0
 
-  //   {name: "flare123", 
-  //     children: [ 
-  //       {name: "sdgfd234", value: 231234} ,
-  //       {name: "dgfsgd234" , value: 5672345 }
-  //     ] 
-  //   }
-    
-  //   ];
+  for (i=0; i<402; i++)
+  {
 
-  //     const width = 932;
-  //     const height = 932;
-  //     const color = d3.scaleLinear()
-  //   .domain([0, 5])
-  //   .range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
-  //   .interpolate(d3.interpolateHcl);
+    // Count for Houses
+    if (harry_potter_data[i] && harry_potter_data[i].house==='Gryffindor')
+    countGryffindor++;
 
-  // const pack = data => d3.pack()
-  //   .size([width, height])
-  //   .padding(3)
-  // (d3.hierarchy(data)
-  //   .sum(d => d.value)
-  //   .sort((a, b) => b.value - a.value))
+    if (harry_potter_data[i] && harry_potter_data[i].house==='Hufflepuff')
+    countHufflepuff++;
 
+    if (harry_potter_data[i] && harry_potter_data[i].house==='Slytherin')
+    countSlytherin++;
 
-    
+    if (harry_potter_data[i] && harry_potter_data[i].house==='Ravenclaw')
+    countRavenclaw++;
 
-  //   //  function chart() {
-  //       const root = pack(data);
-  //       let focus = root;
-  //       let view;
-    
-  //       const svg = d3.select(d3ref.current)
-  //       // const svg = d3.create("svg")
-  //           .attr("viewBox", `-${width / 2} -${height / 2} ${width} ${height}`)
-  //           .style("display", "block")
-  //           .style("margin", "0 -14px")
-  //           .style("background", color(0))
-  //           .style("cursor", "pointer")
-  //           .on("click", (event) => zoom(event, root));
-    
-  //       const node = svg.append("g")
-  //       .selectAll("circle")
-  //       .data(root.descendants().slice(1))
-  //       .join("circle")
-  //           .attr("fill", d => d.children ? color(d.depth) : "white")
-  //           .attr("pointer-events", d => !d.children ? "none" : null)
-  //           .on("mouseover", function() { d3.select(this).attr("stroke", "#000"); })
-  //           .on("mouseout", function() { d3.select(this).attr("stroke", null); })
-  //           .on("click", (event, d) => focus !== d && (zoom(event, d), event.stopPropagation()));
-    
-  //       const label = svg.append("g")
-  //           .style("font", "10px sans-serif")
-  //           .attr("pointer-events", "none")
-  //           .attr("text-anchor", "middle")
-  //       .selectAll("text")
-  //       .data(root.descendants())
-  //       .join("text")
-  //           .style("fill-opacity", d => d.parent === root ? 1 : 0)
-  //           .style("display", d => d.parent === root ? "inline" : "none")
-  //           .text(d => d.data.name);
-    
-  //           root.r = 100;
-  //       zoomTo([root.x, root.y, root.r * 2]);
-    
-  //       function zoomTo(v) {
-  //       const k = width / v[2];
-    
-  //       view = v;
-    
-  //       label.attr("transform", d => `translate(${(d.x - v[0]) * k},${(d.y - v[1]) * k})`);
-  //       node.attr("transform", d => `translate(${(d.x - v[0]) * k},${(d.y - v[1]) * k})`);
-  //       node.attr("r", d => d.r * k);
-  //       }
-    
-  //       function zoom(event, d) {
-  //       const focus0 = focus;
-    
-  //       focus = d;
-    
-  //       const transition = svg.transition()
-  //           .duration(event.altKey ? 7500 : 750)
-  //           .tween("zoom", d => {
-  //               const i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2]);
-  //               return t => zoomTo(i(t));
-  //           });
-    
-  //       label
-  //           .filter(function(d) { return d.parent === focus || this.style.display === "inline"; })
-  //           .transition(transition)
-  //           .style("fill-opacity", d => d.parent === focus ? 1 : 0)
-  //           .on("start", function(d) { if (d.parent === focus) this.style.display = "inline"; })
-  //           .on("end", function(d) { if (d.parent !== focus) this.style.display = "none"; });
-  //       }
-    
-  //       // return svg.node();
-  //   // }
+    // Count for ancestry types
+    if (harry_potter_data[i] && harry_potter_data[i].ancestry==='pure-blood')
+    countPureblood++;
 
-  //   // chart();
+    if (harry_potter_data[i] && harry_potter_data[i].ancestry==='half-blood')
+    countHalfblood++;
 
-  const flare = {name: "flare", children: [ {name: "Dfgdf" , size: 234 } , {name: "Dffdggdf" , size: 2344 }] }
+    if (harry_potter_data[i] && harry_potter_data[i].ancestry==='muggleborn')
+    countMuggleborn++;
 
-  const chart = Pack(flare, {
+    if (harry_potter_data[i] && harry_potter_data[i].ancestry==='muggle')
+    countMuggle++;
+
+    // Gryffindor + Ancestry
+    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='pure-blood' && harry_potter_data[i].house==='Gryffindor'))
+    countPurebloodGryf++;
+
+    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='half-blood' && harry_potter_data[i].house==='Gryffindor'))
+    countHalfbloodGryf++;
+
+    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='muggleborn' && harry_potter_data[i].house==='Gryffindor'))
+    countMugglebornGryf++;
+
+    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='muggle' && harry_potter_data[i].house==='Gryffindor'))
+    countMuggleGryf++;
+
+    // Hufflepuff + Ancestry
+    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='pure-blood' && harry_potter_data[i].house==='Hufflepuff'))
+    countPurebloodHuff++;
+
+    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='half-blood' && harry_potter_data[i].house==='Hufflepuff'))
+    countHalfbloodHuff++;
+
+    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='muggleborn' && harry_potter_data[i].house==='Hufflepuff'))
+    countMugglebornHuff++;
+
+    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='muggle' && harry_potter_data[i].house==='Hufflepuff'))
+    countMuggleHuff++;
+
+    // Ravenclaw + Ancestry
+    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='pure-blood' && harry_potter_data[i].house==='Ravenclaw'))
+    countPurebloodRavc++;
+
+    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='half-blood' && harry_potter_data[i].house==='Ravenclaw'))
+    countHalfbloodRavc++;
+
+    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='muggleborn' && harry_potter_data[i].house==='Ravenclaw'))
+    countMugglebornRavc++;
+
+    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='muggle' && harry_potter_data[i].house==='Ravenclaw'))
+    countMuggleRavc++;
+
+    // Slytherin + Ancestry
+    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='pure-blood' && harry_potter_data[i].house==='Slytherin'))
+    countPurebloodSlyt++;
+
+    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='half-blood' && harry_potter_data[i].house==='Slytherin'))
+    countHalfbloodSlyt++;
+
+    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='muggleborn' && harry_potter_data[i].house==='Slytherin'))
+    countMugglebornSlyt++;
+
+    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='muggle' && harry_potter_data[i].house==='Slytherin'))
+    countMuggleSlyt++;
+
+  }
+
+  const Hogwiz = 
+{
+    name: "Hogwarts", children:
+    [{name: "Gryffindor", children:[ {name: "Pure-blood", size: countPurebloodGryf},{name: "Half-blood", size: countHalfbloodGryf},{name: "Muggleborn", size: countMugglebornGryf},{name: "Muggle", size: countMuggleGryf}]},
+     {name: "Hufflepuff", children:[ {name: "Pure-blood", size: countPurebloodHuff},{name: "Half-blood", size: countHalfbloodHuff},{name: "Muggleborn", size: countMugglebornHuff},{name: "Muggle", size: countMuggleHuff}]},
+     {name: "Ravenclaw", children: [ {name: "Pure-blood", size: countPurebloodRavc},{name: "Half-blood", size: countHalfbloodRavc},{name: "Muggleborn", size: countMugglebornRavc},{name: "Muggle", size: countMuggleRavc}]},
+     {name: "Slytherin", children: [ {name: "Pure-blood", size: countPurebloodSlyt},{name: "Half-blood", size: countHalfbloodSlyt},{name: "Muggleborn", size: countMugglebornSlyt},{name: "Muggle", size: countMuggleSlyt}]}]
+}
+
+  const chart = Pack(Hogwiz, {
     value: d => d.size, // size of each node (file); null for internal nodes (folders)
     label: (d, n) => [...d.name.split(/(?=[A-Z][a-z])/g), n.value.toLocaleString("en")].join("\n"),
     title: (d, n) => `${n.ancestors().reverse().map(({data: d}) => d.name).join(".")}\n${n.value.toLocaleString("en")}`,
-    link: (d, n) => n.children
-      ? `https://github.com/prefuse/Flare/tree/master/flare/src/${n.ancestors().reverse().map(d => d.data.name).join("/")}`
-      : `https://github.com/prefuse/Flare/blob/master/flare/src/${n.ancestors().reverse().map(d => d.data.name).join("/")}.as`,
+    link: (d, n) => n.children,
+    //   ? `https://github.com/prefuse/Flare/tree/master/flare/src/${n.ancestors().reverse().map(d => d.data.name).join("/")}`
+    //   : `https://github.com/prefuse/Flare/blob/master/flare/src/${n.ancestors().reverse().map(d => d.data.name).join("/")}.as`,
     width: 1152,
     height: 1152
   })
