@@ -8,7 +8,14 @@ module.exports = {
       'playfair': ['Playfair Display', 'ui-serif'],
       'garamond': ['EB Garamond', 'ui-serif']
     },
-    extend: {},
+    fontSize: {
+      xl: '64px'
+    },
+    extend: {
+      colors: {
+        'theme-yellow': '#FFF175'
+      }
+    },
   },
   plugins: [],
 }
