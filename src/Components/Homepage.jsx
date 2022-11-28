@@ -29,14 +29,45 @@ const Homepage = () =>{
 
     return(
         <div>
-            <section className="flex flex-col items-center gap-14 bg-frame1 py-[360px]">
-                <div className="font-playfair font-bold text-xl px-[20px] py-[10px] bg-theme-yellow text-black w-max">DataWiz: Magic is Everywhere</div>
+            <section className="flex flex-col items-center gap-14 bg-frame1 py-[430px]">
+                <div className="font-playfair font-bold text-xl px-[30px] py-[10px] bg-theme-yellow text-black w-max">DataWiz: Magic is Everywhere</div>
                 <div className="font-garamond text-md px-[20px] bg-theme-black text-white w-max">A comprehensive collection of data by our new Daily Prophet reporters</div>
             </section>
-            <BarChart harry_potter_data={data}/>
-            <BubbleChart harry_potter_data={data}/>
-            <ScatterPlot harry_potter_data={data}/>
-            <CirclePacking harry_potter_data={data}/>
+            <section className="flex flex-col items-center gap-14 bg-frame2 py-[430px]">
+                <div className="font-playfair font-bold text-xl px-[30px] py-[10px] bg-theme-yellow text-black w-max">Welcome to Hogwarts!</div>
+                <br></br><br></br>
+                <div className="font-garamond text-md px-[20px] bg-theme-black text-white w-max">Let’s explore the world of data and wizarding world</div>
+                <div className="font-garamond text-md px-[10px] bg-theme-white text-black w-max">We Solemnly Swear That We Are Up to No Good</div>
+            </section>
+            <section className="flex flex-col items-center gap-14 bg-frame3 py-[290px]">
+                <div className="font-playfair font-bold text-xl px-[20px] py-[10px] bg-theme-white text-black w-max">All about wizards and their birthdays</div>
+                <div className="font-garamond text-md px-[20px] bg-theme-black text-white w-max">Number of wizards born in each month</div>
+                <BarChart harry_potter_data={data}/>
+            </section>
+            <section className="flex flex-col items-center gap-14 bg-frame4 py-[290px]">
+                <div className="font-playfair font-bold text-xl px-[20px] py-[10px] bg-theme-white text-black w-max">Who is your favorite wizard or witch?</div>
+                <div className="font-garamond text-md px-[20px] bg-theme-black text-white w-max">Wizards and their eye colors -  we have a lot of Blue eyes!</div>
+                <BubbleChart harry_potter_data={data}/>
+            </section>
+            <section className="flex flex-col items-center gap-14 bg-frame5 py-[290px]">
+                <div className="font-playfair font-bold text-xl px-[20px] py-[10px] bg-theme-white text-black w-max">Girl power at Hogwarts!</div>
+                <div className="font-garamond text-md px-[20px] bg-theme-black text-white w-max">Number of witches enrolled in Hogwarts so far</div>
+                <ScatterPlot harry_potter_data={data}/>
+            </section>
+            <section className="flex flex-col items-center gap-14 bg-frame6 py-[290px]">
+                <div className="font-playfair font-bold text-xl px-[20px] py-[10px] bg-theme-white text-black w-max">Hogwarts is a diverse community!</div>
+                <div className="font-garamond text-md px-[20px] bg-theme-black text-white w-max">Witches and Wizards at Hogwarts by their ancestry</div>
+                <CirclePacking harry_potter_data={data}/>
+                <div className="font-garamond font-italics text-md px-[20px] bg-theme-black text-white w-max">Disclaimer: We do not support any form of prejudice with respect to blood status. This is a post-you know who era ya’ll!!</div>
+            </section>
+            <section className="flex flex-col items-center gap-14 bg-frame7 py-[430px]">
+                <div className="font-garamond text-md px-[20px] bg-theme-black text-white w-max">Daily Prophet Reporters</div>
+                <div className="font-garamond text-md px-[10px] bg-theme-black text-white w-max">Dharini & Shaunak</div>
+                <br></br><br></br>
+                <div className="font-garamond text-md px-[10px] bg-theme-black text-white w-max">More details on GitHub</div>
+                <br></br><br></br>
+                <div className="font-garamond text-md px-[10px] bg-theme-white text-black w-max">Mischief Managed!</div>
+            </section>   
         </div>
     )
 }
