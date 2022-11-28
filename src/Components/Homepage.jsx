@@ -42,7 +42,7 @@ const Homepage = () =>{
                 <div className="font-garamond text-md px-[20px] bg-theme-black text-white w-max">Let’s explore the world of data and wizarding world</div>
                 <div className="font-garamond text-md px-[10px] bg-theme-white text-black w-max">We Solemnly Swear That We Are Up to No Good</div>
             </section>
-            <section className="flex flex-col items-center gap-14 bg-frame3 py-[290px]">
+            <section className="flex flex-col items-center gap-14 bg-black py-[290px]">
                 <div className="font-playfair font-bold text-xl px-[20px] py-[10px] bg-theme-white text-black w-max">All about wizards and their birthdays</div>
                 <div className="font-garamond text-md px-[20px] bg-theme-black text-white w-max">Number of wizards born in each month</div>
                 <BarChart harry_potter_data={data}/>
