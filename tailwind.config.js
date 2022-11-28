@@ -9,11 +9,14 @@ module.exports = {
       'garamond': ['EB Garamond', 'ui-serif']
     },
     fontSize: {
+      md: '40px',
       xl: '64px'
     },
     extend: {
       colors: {
-        'theme-yellow': '#FFF175'
+        'theme-yellow': '#FFF175',
+        'theme-black': '#000000',
+        'theme-white': '#ffffff'
       },
       backgroundImage: {
         'frame1': "url('https://images.unsplash.com/photo-1515816052601-210d5501d471?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80')",
