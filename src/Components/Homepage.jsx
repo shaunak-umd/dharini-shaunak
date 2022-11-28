@@ -29,6 +29,10 @@ const Homepage = () =>{
 
     return(
         <div>
+            <section className="flex flex-col items-center gap-14 bg-frame1 py-[360px]">
+                <div className="font-playfair font-bold text-xl px-[20px] py-[10px] bg-theme-yellow text-black w-max">DataWiz: Magic is Everywhere</div>
+                <div className="font-garamond text-md px-[20px] bg-theme-black text-white w-max">A comprehensive collection of data by our new Daily Prophet reporters</div>
+            </section>
             <BarChart harry_potter_data={data}/>
             <BubbleChart harry_potter_data={data}/>
             <ScatterPlot harry_potter_data={data}/>
