@@ -29,9 +29,12 @@ const Homepage = () =>{
 
     return(
         <div>
-            <section className="flex flex-col items-center gap-14 bg-frame1 py-[430px]">
-                <div className="font-playfair font-bold text-xl px-[30px] py-[10px] bg-theme-yellow text-black w-max">DataWiz: Magic is Everywhere</div>
+            <section className="flex flex-col items-center gap-14 bg-frame1 h-screen justify-center relative">
+                <div className="font-playfair font-bold text-xl px-[20px] py-[10px] bg-theme-yellow text-black w-max">DataWiz: Magic is Everywhere</div>
                 <div className="font-garamond text-md px-[20px] bg-theme-black text-white w-max">A comprehensive collection of data by our new Daily Prophet reporters</div>
+                <div className="absolute bottom-0">
+                    <span className="material-symbols-outlined text-white text-xl animate-bounce">keyboard_double_arrow_down</span>
+                </div>
             </section>
             <section className="flex flex-col items-center gap-14 bg-frame2 py-[430px]">
                 <div className="font-playfair font-bold text-xl px-[30px] py-[10px] bg-theme-yellow text-black w-max">Welcome to Hogwarts!</div>
