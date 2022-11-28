@@ -47,17 +47,17 @@ const Homepage = () =>{
                 <div className="font-garamond text-md px-[20px] bg-theme-black text-white w-max">Number of wizards born in each month</div>
                 <BarChart harry_potter_data={data}/>
             </section>
-            <section className="flex flex-col items-center gap-14 bg-frame4 py-[290px]">
+            <section className="flex flex-col items-center gap-14 bg-black py-[290px]">
                 <div className="font-playfair font-bold text-xl px-[20px] py-[10px] bg-theme-white text-black w-max">Who is your favorite wizard or witch?</div>
                 <div className="font-garamond text-md px-[20px] bg-theme-black text-white w-max">Wizards and their eye colors -  we have a lot of Blue eyes!</div>
                 <BubbleChart harry_potter_data={data}/>
             </section>
-            <section className="flex flex-col items-center gap-14 bg-frame5 py-[290px]">
+            <section className="flex flex-col items-center gap-14 bg-black py-[290px]">
                 <div className="font-playfair font-bold text-xl px-[20px] py-[10px] bg-theme-white text-black w-max">Girl power at Hogwarts!</div>
                 <div className="font-garamond text-md px-[20px] bg-theme-black text-white w-max">Number of witches enrolled in Hogwarts so far</div>
                 <ScatterPlot harry_potter_data={data}/>
             </section>
-            <section className="flex flex-col items-center gap-14 bg-frame6 py-[290px]">
+            <section className="flex flex-col items-center gap-14 bg-black py-[290px]">
                 <div className="font-playfair font-bold text-xl px-[20px] py-[10px] bg-theme-white text-black w-max">Hogwarts is a diverse community!</div>
                 <div className="font-garamond text-md px-[20px] bg-theme-black text-white w-max">Witches and Wizards at Hogwarts by their ancestry</div>
                 <CirclePacking harry_potter_data={data}/>
