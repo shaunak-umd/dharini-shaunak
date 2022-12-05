@@ -13,6 +13,9 @@ module.exports = {
       xl: '64px'
     },
     extend: {
+      cursor: {
+        'fancy': "url(/sparkle.cur), auto" 
+      },
       colors: {
         'theme-yellow': '#FFF175',
         'theme-black': '#000000',
