@@ -9,6 +9,7 @@ module.exports = {
       'garamond': ['EB Garamond', 'ui-serif']
     },
     fontSize: {
+      sm: '24px',
       md: '40px',
       xl: '64px'
     },
