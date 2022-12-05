@@ -29,14 +29,14 @@ const Homepage = () =>{
 
     return(
         <div>
-            <section className="flex flex-col items-center gap-14 bg-frame1 h-screen justify-center relative">
+            <section className="flex flex-col items-center gap-14 bg-frame1 bg-cover h-screen justify-center relative">
                 <div className="font-playfair font-bold text-xl px-[20px] py-[10px] bg-theme-yellow text-black w-max">DataWiz: Magic is Everywhere</div>
                 <div className="font-garamond text-md px-[20px] bg-theme-black text-white w-max">A comprehensive collection of data by our new Daily Prophet reporters</div>
                 <div className="absolute bottom-0">
                     <span className="material-symbols-outlined text-white text-xl animate-bounce">keyboard_double_arrow_down</span>
                 </div>
             </section>
-            <section className="flex flex-col items-center gap-14 bg-frame2 py-[430px]">
+            <section className="flex flex-col items-center gap-14 bg-frame2 bg-cover py-[430px]">
                 <div className="font-playfair font-bold text-xl px-[30px] py-[10px] bg-theme-yellow text-black w-max">Welcome to Hogwarts!</div>
                 <br></br><br></br>
                 <div className="font-garamond text-md px-[20px] bg-theme-black text-white w-max">Let’s explore the world of data and wizarding world</div>
@@ -63,7 +63,7 @@ const Homepage = () =>{
                 <CirclePacking harry_potter_data={data} className="bg-white"/>
                 <div className="font-garamond text-sm px-[20px] bg-theme-black text-white w-max">Disclaimer: We do not support any form of prejudice with respect to blood status. This is a post-you know who era ya’ll!!</div>
             </section>
-            <section className="flex flex-col items-center gap-14 bg-frame7 py-[290px]">
+            <section className="flex flex-col items-center gap-14 bg-frame7 bg-cover py-[290px]">
                 <div className="font-garamond text-md px-[20px] bg-theme-black text-white w-max">Daily Prophet Reporters</div>
                 <div className="font-garamond text-md px-[10px] bg-theme-black text-white w-max">Dharini & Shaunak</div>
                 <br></br><br></br>
