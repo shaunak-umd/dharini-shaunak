@@ -61,7 +61,7 @@ const Homepage = () =>{
                 <div className="font-playfair font-bold text-xl px-[20px] py-[10px] bg-theme-white text-black w-max">Hogwarts is a diverse community!</div>
                 <div className="font-garamond text-md px-[20px] bg-theme-black text-white w-max">Witches and Wizards at Hogwarts by their ancestry</div>
                 <CirclePacking harry_potter_data={data}/>
-                <div className="font-garamond text-lg px-[20px] bg-theme-black text-white w-max">Disclaimer: We do not support any form of prejudice with respect to blood status. This is a post-you know who era ya’ll!!</div>
+                <div className="font-garamond text-sm px-[20px] bg-theme-black text-white w-max">Disclaimer: We do not support any form of prejudice with respect to blood status. This is a post-you know who era ya’ll!!</div>
             </section>
             <section className="flex flex-col items-center gap-14 bg-frame7 py-[290px]">
                 <div className="font-garamond text-md px-[20px] bg-theme-black text-white w-max">Daily Prophet Reporters</div>
