@@ -10,6 +10,8 @@ const Homepage = () =>{
     //state of this component
     const [data,setData] = useState([]);
 
+    const flag = false;
+
     //component did mount
     useEffect(()=>{
     (async() =>{
@@ -22,11 +24,27 @@ const Homepage = () =>{
     //get data from api
     async function getHarryPotterData() 
     {
-        const response = await fetch("https://hp-api.herokuapp.com/api/characters");
+        fetch("https://hp-api.herokuapp.com/api/characters").then(response => {
+            if (response && response.status === 200) {
+                flag = true;
+                return response.json();
+            }
+            return response.status;
+        }).catch((error) => {
+            console.log(error);
+            return error;
+        });
         //console.log(await response.json());
-        return response.json();
+        // return response.json();
     }
+    // console.log(data);
 
+    if ( !flag)
+        return (
+            <div>
+                API is not functional at this time.
+            </div>
+        );
     return(
         <div>
             <BarChart harry_potter_data={data}/>
