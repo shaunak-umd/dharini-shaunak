@@ -67,7 +67,7 @@ const Homepage = () =>{
                 <div className="font-garamond text-md px-[20px] bg-theme-black text-white w-max">Daily Prophet Reporters</div>
                 <div className="font-garamond text-md px-[10px] bg-theme-black text-white w-max">Dharini & Shaunak</div>
                 <br></br><br></br>
-                <div className="font-garamond text-md px-[10px] bg-theme-black text-white w-max">More details on GitHub</div>
+                <div className="font-garamond text-md px-[10px] bg-theme-black text-white w-max">More details on <a href="https://github.com/shaunak-umd/dharini-shaunak/tree/main" target="_blank" className="cursor-fancy"><u>GitHub</u></a></div>
                 <br></br><br></br>
                 <div className="font-garamond text-md px-[10px] bg-theme-white text-black w-max">Mischief Managed!</div>
             </section>   
