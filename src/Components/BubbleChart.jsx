@@ -10,14 +10,14 @@ const BubbleChart = ({harry_potter_data}) =>{
     let eyeColours = new Map();
 
     harry_potter_data.map(x => {
-      if (x.eyeColour) {
-        let count = eyeColours.get(x.eyeColour);
+      if (x.EyeColour) {
+        let count = eyeColours.get(x.EyeColour);
         if ( count ) {
           count++;
-          eyeColours.set(x.eyeColour, count);
+          eyeColours.set(x.EyeColour, count);
         }
         else {
-          eyeColours.set(x.eyeColour, 1);
+          eyeColours.set(x.EyeColour, 1);
         }
       }
     });
@@ -40,7 +40,8 @@ const BubbleChart = ({harry_potter_data}) =>{
     //   {id: "flare.animate.interpolate.ArrayInterpolator", value: 1983}
 
     // ];
-    // Copyright 2021 Observable, Inc.
+    
+// Copyright 2021 Observable, Inc.
 // Released under the ISC license.
 // https://observablehq.com/@d3/bubble-chart
 function d3BubbleChart(data, {
@@ -165,14 +166,6 @@ function d3BubbleChart(data, {
 
   // return Object.assign(svg.node(), {scales: {color}});
 }
-    
-    
-    
-
-    
-    
-
-
 
 
 d3BubbleChart(array_of_eye_colours, {
@@ -185,20 +178,12 @@ d3BubbleChart(array_of_eye_colours, {
 });
 
 
-
-
-
-
-  
-  
-
-  
-    return(
-        <div>
-        
-          <svg ref={d3ref} />
-        </div>
-    )
+  return(
+      <div>
+      
+        <svg ref={d3ref} />
+      </div>
+  )
 }
 
 export default BubbleChart;

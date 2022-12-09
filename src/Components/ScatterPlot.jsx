@@ -136,35 +136,35 @@ const ScatterPlot = ({harry_potter_data}) =>{
   let countSlytGirls=0;
   let countRaveGirls=0;
 
-  for (i=0; i<402; i++)
+  for (i=0; i<33; i++)
   {
 
-    if (harry_potter_data[i] && harry_potter_data[i].house==='Gryffindor')
+    if (harry_potter_data[i] && harry_potter_data[i].House==='Gryffindor')
     countGryffindor++;
 
-    if (harry_potter_data[i] && harry_potter_data[i].house==='Hufflepuff')
+    if (harry_potter_data[i] && harry_potter_data[i].House==='Hufflepuff')
     countHufflepuff++;
 
-    if (harry_potter_data[i] && harry_potter_data[i].house==='Slytherin')
+    if (harry_potter_data[i] && harry_potter_data[i].House==='Slytherin')
     countSlytherin++;
 
-    if (harry_potter_data[i] && harry_potter_data[i].house==='Ravenclaw')
+    if (harry_potter_data[i] && harry_potter_data[i].House==='Ravenclaw')
     countRavenclaw++;
   }
 
-  for (i=0; i<402; i++)
+  for (i=0; i<32; i++)
   {
 
-    if (harry_potter_data[i] && (harry_potter_data[i].house==='Gryffindor' && harry_potter_data[i].gender==='female'))
+    if (harry_potter_data[i] && (harry_potter_data[i].House==='Gryffindor' && harry_potter_data[i].Gender==='Female'))
     countGryfGirls++;
 
-    if (harry_potter_data[i] && (harry_potter_data[i].house==='Hufflepuff' && harry_potter_data[i].gender==='female'))
+    if (harry_potter_data[i] && (harry_potter_data[i].House==='Hufflepuff' && harry_potter_data[i].Gender==='Female'))
     countHuffGirls++;
 
-    if (harry_potter_data[i] && (harry_potter_data[i].house==='Slytherin' && harry_potter_data[i].gender==='female'))
+    if (harry_potter_data[i] && (harry_potter_data[i].House==='Slytherin' && harry_potter_data[i].Gender==='Female'))
     countSlytGirls++;
 
-    if (harry_potter_data[i] && (harry_potter_data[i].house==='Ravenclaw' && harry_potter_data[i].gender==='female'))
+    if (harry_potter_data[i] && (harry_potter_data[i].House==='Ravenclaw' && harry_potter_data[i].Gender==='Female'))
     countRaveGirls++;
   }
 
