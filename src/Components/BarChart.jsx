@@ -121,7 +121,7 @@ const d3BarChart = (data, {
   let countNov=0;
   let countDec=0;
 
-  for (i=0; i<32; i++)
+  for (i=0; i<50; i++)
   {
 
     if (harry_potter_data[i] && harry_potter_data[i].BirthMonth === 'January')

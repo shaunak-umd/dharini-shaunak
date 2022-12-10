@@ -15,9 +15,9 @@ const ScatterPlot = ({harry_potter_data}) =>{
     y = ([,y]) => y, // given d in data, returns the (quantitative) y-value
     r = 3, // (fixed) radius of dots, in pixels
     title, // given d in data, returns the title
-    marginTop = 20, // top margin, in pixels
+    marginTop = 30, // top margin, in pixels
     marginRight = 30, // right margin, in pixels
-    marginBottom = 30, // bottom margin, in pixels
+    marginBottom = 50, // bottom margin, in pixels
     marginLeft = 50, // left margin, in pixels
     inset = r * 2, // inset the default range, in pixels
     insetTop = inset, // inset the default y-range
@@ -36,8 +36,8 @@ const ScatterPlot = ({harry_potter_data}) =>{
     yLabel, // a label for the y-axis
     xFormat, // a format specifier string for the x-axis
     yFormat, // a format specifier string for the y-axis
-    fill = "none", // fill color for dots
-    stroke = "currentColor", // stroke color for the dots
+    fill = "#474747", // fill color for dots
+    stroke = "#00000000", // stroke color for the dots
     strokeWidth = 1.5, // stroke width for dots
     halo = "#fff", // color of label halo 
     haloWidth = 3 // padding around the labels
@@ -107,7 +107,7 @@ const ScatterPlot = ({harry_potter_data}) =>{
       .attr("y", i => yScale(Y[i]))
       .text(i => T[i])
       .call(text => text.clone(true))
-      .attr("fill", "none")
+      .attr("fill", "FFF175")
       .attr("stroke", halo)
       .attr("stroke-width", haloWidth);
 
@@ -136,7 +136,7 @@ const ScatterPlot = ({harry_potter_data}) =>{
   let countSlytGirls=0;
   let countRaveGirls=0;
 
-  for (i=0; i<33; i++)
+  for (i=0; i<50; i++)
   {
 
     if (harry_potter_data[i] && harry_potter_data[i].House==='Gryffindor')
@@ -183,8 +183,8 @@ const ScatterPlot = ({harry_potter_data}) =>{
   y: d => d.Girls,
   title: d => d.HouseName,
   xLabel: "Number of Students in Hogwarts Houses →",
-  yLabel: "↑ Number of female wizards",
-  stroke: "steelblue",
+  yLabel: "↑ Number of Witches",
+  stroke: "#000000",
   width: 1000,
   height: 500
   });

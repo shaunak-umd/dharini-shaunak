@@ -24,7 +24,7 @@ const CirclePacking = ({harry_potter_data}) =>{
   let countMugglebornSlyt=0
   let countMuggleSlyt=0
 
-  for (i=0; i<32; i++)
+  for (i=0; i<50; i++)
   {
     // Gryffindor + Ancestry
     if (harry_potter_data[i] && (harry_potter_data[i].Ancestry==='Pure-blood' && harry_potter_data[i].House==='Gryffindor'))

@@ -114,21 +114,19 @@ function d3BubbleChart(data, {
   let colour_mapping = new Map();
   colour_mapping.set('Orange','#ffb04c');
   colour_mapping.set('Grey','#bdbdbd');
-  colour_mapping.set('Black','#9e9e9e');
+  colour_mapping.set('Black','#595959');
   colour_mapping.set('Red','#ef5350');
   colour_mapping.set('Amber','#fbc02d');
   colour_mapping.set('Yellowish','#fff176');
   colour_mapping.set('Brown','#8d6e63');
   colour_mapping.set('Green','#9ccc65');
-  colour_mapping.set('Hazel','#bcaaa4');
+  colour_mapping.set('Hazel','#c1a14d');
   colour_mapping.set('Pale, silvery','#f5f5f5');
-  colour_mapping.set('Blue','#42a5f5');
+  colour_mapping.set('Blue','#61c6ff');
   colour_mapping.set('Yellow','#fff9c4');
   colour_mapping.set('White','#fafafa');
   colour_mapping.set('Dark','#757575');
 
-
-  
 
   console.log(colour_mapping.get('red'));
 
@@ -174,7 +172,7 @@ d3BubbleChart(array_of_eye_colours, {
   group: d => d.id.split(".")[1],
   title: d => `${d.id}\n${d.value.toLocaleString("en")}`,
   link: d => `https://github.com/prefuse/Flare/blob/master/flare/src/${d.id.replace(/\./g, "/")}.as`,
-  width: 1152
+  width: 1000
 });
 
 

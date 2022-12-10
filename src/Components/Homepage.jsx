@@ -36,7 +36,7 @@ const Homepage = () =>{
             House: 'Gryffindor',
             BirthMonth: 'July',
             EyeColour: 'Green',
-            HairColour: 'Black'
+            HairColour: 'Dark'
         },
 
         {
@@ -115,7 +115,7 @@ const Homepage = () =>{
             Ancestry:'Half-blood',
             House: 'Slytherin',
             BirthMonth: 'December',
-            EyeColour: 'Blue',
+            EyeColour: 'Red',
             HairColour: 'Bald'
         },
 
@@ -136,7 +136,7 @@ const Homepage = () =>{
             House: 'Gryffindor',
             BirthMonth: 'May',
             EyeColour: 'Brown',
-            HairColour: 'Brown'
+            HairColour: 'Dark'
         },
 
         {
@@ -145,17 +145,17 @@ const Homepage = () =>{
             Ancestry:'Pure-blood',
             House: 'Ravenclaw',
             BirthMonth: 'November',
-            EyeColour: 'Blue',
+            EyeColour: 'Pale, silvery',
             HairColour: 'Yellow'
         },
 
         {
             Name: 'Minerva McGonagall',
-            Gender: 'Feale',
+            Gender: 'Female',
             Ancestry:'Pure-blood',
             House: 'Gryffindor',
             BirthMonth: 'July',
-            EyeColour: 'Brown',
+            EyeColour: 'Hazel',
             HairColour: 'Black'
         },
 
@@ -186,7 +186,7 @@ const Homepage = () =>{
             House: 'None',
             BirthMonth: 'July',
             EyeColour: 'Blue',
-            HairColour: 'Yellow'
+            HairColour: 'Yellowish'
         },
 
         {
@@ -196,7 +196,7 @@ const Homepage = () =>{
             House: 'None',
             BirthMonth: 'September',
             EyeColour: 'Brown',
-            HairColour: 'Brown'
+            HairColour: 'Yellowish'
         },
 
         {
@@ -216,7 +216,7 @@ const Homepage = () =>{
             House: 'Gryffindor',
             BirthMonth: 'June',
             EyeColour: 'Green',
-            HairColour: 'Black'
+            HairColour: 'Dark'
         },
 
         {
@@ -316,7 +316,7 @@ const Homepage = () =>{
             House: 'Hufflepuff',
             BirthMonth: 'September',
             EyeColour: 'Brown',
-            HairColour: 'Yellow'
+            HairColour: 'Yellowish'
         },
 
         {
@@ -347,6 +347,186 @@ const Homepage = () =>{
             BirthMonth: 'July',
             EyeColour: 'Green',
             HairColour: 'Pink'
+        },
+
+        {
+            Name: 'Ludo Bagman',
+            Gender: 'Male',
+            Ancestry:'Pure-blood',
+            House: 'Slytherin',
+            BirthMonth: 'June',
+            EyeColour: 'Brown',
+            HairColour: 'Grey'
+        },
+
+        {
+            Name: 'Hannah Abbott',
+            Gender: 'Female',
+            Ancestry:'Pure-blood',
+            House: 'Hufflepuff',
+            BirthMonth: 'March',
+            EyeColour: 'Blue',
+            HairColour: 'Black'
+        },
+
+        {
+            Name: 'Bathilda Bagshot',
+            Gender: 'Female',
+            Ancestry:'Pure-blood',
+            House: 'Gryffindor',
+            BirthMonth: 'April',
+            EyeColour: 'Grey',
+            HairColour: 'Grey'
+        },
+
+        {
+            Name: 'Susan Bones',
+            Gender: 'Female',
+            Ancestry:'Pure-blood',
+            House: 'Hufflepuff',
+            BirthMonth: 'February',
+            EyeColour: 'Blue',
+            HairColour: 'Yellow'
+        },
+
+        {
+            Name: 'Lavender Brown',
+            Gender: 'Female',
+            Ancestry:'Pure-blood',
+            House: 'Gryffindor',
+            BirthMonth: 'April',
+            EyeColour: 'Blue',
+            HairColour: 'Brown'
+        },
+
+        {
+            Name: 'Terry Boot',
+            Gender: 'Male',
+            Ancestry:'Pure-blood',
+            House: 'Ravenclaw',
+            BirthMonth: 'August',
+            EyeColour: 'Green',
+            HairColour: 'Black'
+        },
+
+        {
+            Name: 'Frank Bryce',
+            Gender: 'Male',
+            Ancestry:'Muggle',
+            House: 'Nope',
+            BirthMonth: 'April',
+            EyeColour: 'Green',
+            HairColour: 'Grey'
+        },
+
+        {
+            Name: 'Cho Chang',
+            Gender: 'Female',
+            Ancestry:'Pure-blood',
+            House: 'Ravenclaw',
+            BirthMonth: 'August',
+            EyeColour: 'Brown',
+            HairColour: 'Black'
+        },
+
+        {
+            Name: 'Vincent Crabbe',
+            Gender: 'Male',
+            Ancestry:'Pure-blood',
+            House: 'Slytherin',
+            BirthMonth: 'May',
+            EyeColour: 'Green',
+            HairColour: 'Grey'
+        },
+
+        {
+            Name: 'Colin Creevey',
+            Gender: 'Male',
+            Ancestry:'Muggleborn',
+            House: 'Gryffindor',
+            BirthMonth: 'August',
+            EyeColour: 'Brown',
+            HairColour: 'Black'
+        },
+
+        {
+            Name: 'Dennis Creevey',
+            Gender: 'Male',
+            Ancestry:'Muggleborn',
+            House: 'Gryffindor',
+            BirthMonth: 'June',
+            EyeColour: 'Brown',
+            HairColour: 'Black'
+        },
+
+        {
+            Name: 'Marietta Edgecombe',
+            Gender: 'Female',
+            Ancestry:'Half-blood',
+            House: 'Ravenclaw',
+            BirthMonth: 'Septemper',
+            EyeColour: 'Black',
+            HairColour: 'Brown'
+        },
+
+        {
+            Name: 'Gregory Goyle',
+            Gender: 'Male',
+            Ancestry:'Pure-blood',
+            House: 'Slytherin',
+            BirthMonth: 'December',
+            EyeColour: 'Brown',
+            HairColour: 'Grey'
+        },
+
+        {
+            Name: 'Gilderoy Lockhart',
+            Gender: 'Male',
+            Ancestry:'Pure-blood',
+            House: 'Hufflepuff',
+            BirthMonth: 'November',
+            EyeColour: 'Brown',
+            HairColour: 'Black'
+        },
+
+        {
+            Name: 'Xenophilius Lovegood',
+            Gender: 'Male',
+            Ancestry:'Pure-blood',
+            House: 'Ravenclaw',
+            BirthMonth: 'June',
+            EyeColour: 'Pale, silvery',
+            HairColour: 'Yellow'
+        },
+
+        {
+            Name: 'Pansy Parkinson',
+            Gender: 'Female',
+            Ancestry:'Pure-blood',
+            House: 'Slytherin',
+            BirthMonth: 'Septemper',
+            EyeColour: 'Black',
+            HairColour: 'Dark'
+        },
+
+        {
+            Name: 'Poppy Pomfrey',
+            Gender: 'Female',
+            Ancestry:'Pure-blood',
+            House: 'Gryffindor',
+            BirthMonth: 'December',
+            EyeColour: 'Brown',
+            HairColour: 'Grey'
+        },
+
+        {
+            Name: 'Newt Scamander',
+            Gender: 'Male',
+            Ancestry:'Pure-blood',
+            House: 'Hufflepuff',
+            BirthMonth: 'November',
+            EyeColour: 'Black',
+            HairColour: 'Brown'
         }
     ];
 
@@ -364,25 +544,25 @@ const Homepage = () =>{
                 <div className="font-playfair font-bold text-xl px-[30px] py-[10px] bg-theme-yellow text-black w-max">Welcome to Hogwarts!</div>
                 <br></br><br></br>
                 <div className="font-garamond text-lg px-[20px] bg-theme-black text-white w-max">Let’s explore the world of data and wizarding world</div>
-                <div className="font-garamond text-md px-[10px] bg-theme-white text-black w-max">We Solemnly Swear That We Are Up to No Good</div>
+                <div className="font-garamond text-md px-[10px] bg-theme-white text-black w-max">"We Solemnly Swear That We Are Up to No Good"</div>
             </section>
             <section className="flex flex-col items-center gap-14 bg-black py-[290px]">
                 <div className="font-playfair font-bold text-xl px-[20px] py-[10px] bg-theme-white text-black w-max">All about wizards and their birthdays</div>
-                <div className="font-garamond text-md px-[20px] bg-theme-black text-white w-max">Number of wizards born in each month</div>
+                <div className="font-garamond text-md px-[20px] bg-theme-black text-white w-max">Wizards born in each month</div>
                 <BarChart harry_potter_data={data}/>
             </section>
             <section className="flex flex-col items-center gap-14 bg-black py-[290px]">
                 <div className="font-playfair font-bold text-xl px-[20px] py-[10px] bg-theme-white text-black w-max">Who is your favorite wizard or witch?</div>
-                <div className="font-garamond text-md px-[20px] bg-theme-black text-white w-max">Wizards and their eye colors -  we have a lot of Blue eyes!</div>
+                <div className="font-garamond text-md px-[20px] bg-theme-black text-white w-max">Wizards and their eye colors -  we have a lot of Brown eyes!</div>
                 <BubbleChart harry_potter_data={data}/>
             </section>
             <section className="flex flex-col items-center gap-14 bg-black py-[290px]">
-                <div className="font-playfair font-bold text-xl px-[20px] py-[10px] bg-theme-white text-black w-max">Girl power at Hogwarts!</div>
-                <div className="font-garamond text-md px-[20px] bg-theme-black text-white w-max">Number of witches enrolled in Hogwarts so far</div>
+                <div className="font-playfair font-bold text-xl px-[20px] py-[10px] bg-theme-white text-black w-max">Girl power at Hogwarts</div>
+                <div className="font-garamond text-md px-[20px] bg-theme-black text-white w-max">Number of witches enrolled in Hogwarts</div>
                 <ScatterPlot harry_potter_data={data}/>
             </section>
             <section className="flex flex-col items-center gap-14 bg-black py-[290px]">
-                <div className="font-playfair font-bold text-xl px-[20px] py-[10px] bg-theme-white text-black w-max">Hogwarts is a diverse community!</div>
+                <div className="font-playfair font-bold text-xl px-[20px] py-[10px] bg-theme-white text-black w-max">Hogwarts is a diverse community</div>
                 <div className="font-garamond text-md px-[20px] bg-theme-black text-white w-max">Witches and Wizards at Hogwarts by their ancestry</div>
                 <CirclePacking harry_potter_data={data}/>
                 <div className="font-garamond text-sm px-[20px] bg-theme-black text-white w-max">Disclaimer: We do not support any form of prejudice with respect to blood status. This is a post-you know who era ya’ll!!</div>
@@ -391,7 +571,7 @@ const Homepage = () =>{
                 <div className="font-garamond text-sm px-[20px] bg-theme-black text-white w-max">Daily Prophet Reporters</div>
                 <div className="font-garamond text-md px-[10px] bg-theme-black text-white w-max">Dharini & Shaunak</div>
                 <br></br><br></br>
-                <div className="font-garamond text-md px-[10px] bg-theme-white text-black w-max">Mischief Managed!</div>
+                <div className="font-garamond text-md px-[10px] bg-theme-white text-black w-max">"Mischief Managed!"</div>
                 <br></br><br></br>
                 <div className="font-garamond text-sm px-[10px] bg-theme-black text-white w-max">More details on <a href="https://github.com/shaunak-umd/dharini-shaunak/tree/main" target="_blank" className="cursor-fancy"><u>GitHub</u></a></div>
                 
