@@ -4,7 +4,7 @@ import Homepage from './Components/Homepage';
 
 function App() {
   return (
-    <div>
+    <div className="cursor-fancy">
       <Homepage />
     </div>
   );

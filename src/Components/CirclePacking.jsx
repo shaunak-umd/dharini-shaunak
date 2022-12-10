@@ -7,15 +7,6 @@ const CirclePacking = ({harry_potter_data}) =>{
   const d3ref = useRef();
 
   let i=0;
-  let j=0;
-  let countGryffindor=0;
-  let countHufflepuff=0;
-  let countRavenclaw=0;
-  let countSlytherin=0;
-  let countPureblood=0;
-  let countHalfblood=0;
-  let countMuggleborn=0;
-  let countMuggle=0;
   let countPurebloodGryf=0
   let countHalfbloodGryf=0
   let countMugglebornGryf=0
@@ -33,107 +24,83 @@ const CirclePacking = ({harry_potter_data}) =>{
   let countMugglebornSlyt=0
   let countMuggleSlyt=0
 
-  for (i=0; i<402; i++)
+  for (i=0; i<50; i++)
   {
-
-    // Count for Houses
-    if (harry_potter_data[i] && harry_potter_data[i].house==='Gryffindor')
-    countGryffindor++;
-
-    if (harry_potter_data[i] && harry_potter_data[i].house==='Hufflepuff')
-    countHufflepuff++;
-
-    if (harry_potter_data[i] && harry_potter_data[i].house==='Slytherin')
-    countSlytherin++;
-
-    if (harry_potter_data[i] && harry_potter_data[i].house==='Ravenclaw')
-    countRavenclaw++;
-
-    // Count for ancestry types
-    if (harry_potter_data[i] && harry_potter_data[i].ancestry==='pure-blood')
-    countPureblood++;
-
-    if (harry_potter_data[i] && harry_potter_data[i].ancestry==='half-blood')
-    countHalfblood++;
-
-    if (harry_potter_data[i] && harry_potter_data[i].ancestry==='muggleborn')
-    countMuggleborn++;
-
-    if (harry_potter_data[i] && harry_potter_data[i].ancestry==='muggle')
-    countMuggle++;
-
     // Gryffindor + Ancestry
-    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='pure-blood' && harry_potter_data[i].house==='Gryffindor'))
+    if (harry_potter_data[i] && (harry_potter_data[i].Ancestry==='Pure-blood' && harry_potter_data[i].House==='Gryffindor'))
     countPurebloodGryf++;
 
-    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='half-blood' && harry_potter_data[i].house==='Gryffindor'))
+    if (harry_potter_data[i] && (harry_potter_data[i].Ancestry==='Half-blood' && harry_potter_data[i].House==='Gryffindor'))
     countHalfbloodGryf++;
 
-    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='muggleborn' && harry_potter_data[i].house==='Gryffindor'))
+    if (harry_potter_data[i] && (harry_potter_data[i].Ancestry==='Muggleborn' && harry_potter_data[i].House==='Gryffindor'))
     countMugglebornGryf++;
 
-    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='muggle' && harry_potter_data[i].house==='Gryffindor'))
+    if (harry_potter_data[i] && (harry_potter_data[i].Ancestry==='Muggle' && harry_potter_data[i].House==='Gryffindor'))
     countMuggleGryf++;
 
     // Hufflepuff + Ancestry
-    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='pure-blood' && harry_potter_data[i].house==='Hufflepuff'))
+    if (harry_potter_data[i] && (harry_potter_data[i].Ancestry==='Pure-blood' && harry_potter_data[i].House==='Hufflepuff'))
     countPurebloodHuff++;
 
-    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='half-blood' && harry_potter_data[i].house==='Hufflepuff'))
+    if (harry_potter_data[i] && (harry_potter_data[i].Ancestry==='Half-blood' && harry_potter_data[i].House==='Hufflepuff'))
     countHalfbloodHuff++;
 
-    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='muggleborn' && harry_potter_data[i].house==='Hufflepuff'))
+    if (harry_potter_data[i] && (harry_potter_data[i].Ancestry==='Muggleborn' && harry_potter_data[i].House==='Hufflepuff'))
     countMugglebornHuff++;
 
-    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='muggle' && harry_potter_data[i].house==='Hufflepuff'))
+    if (harry_potter_data[i] && (harry_potter_data[i].Ancestry==='Muggle' && harry_potter_data[i].House==='Hufflepuff'))
     countMuggleHuff++;
 
     // Ravenclaw + Ancestry
-    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='pure-blood' && harry_potter_data[i].house==='Ravenclaw'))
+    if (harry_potter_data[i] && (harry_potter_data[i].Ancestry==='Pure-blood' && harry_potter_data[i].House==='Ravenclaw'))
     countPurebloodRavc++;
 
-    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='half-blood' && harry_potter_data[i].house==='Ravenclaw'))
+    if (harry_potter_data[i] && (harry_potter_data[i].Ancestry==='Half-blood' && harry_potter_data[i].House==='Ravenclaw'))
     countHalfbloodRavc++;
 
-    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='muggleborn' && harry_potter_data[i].house==='Ravenclaw'))
+    if (harry_potter_data[i] && (harry_potter_data[i].Ancestry==='Muggleborn' && harry_potter_data[i].House==='Ravenclaw'))
     countMugglebornRavc++;
 
-    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='muggle' && harry_potter_data[i].house==='Ravenclaw'))
+    if (harry_potter_data[i] && (harry_potter_data[i].Ancestry==='Muggle' && harry_potter_data[i].House==='Ravenclaw'))
     countMuggleRavc++;
 
     // Slytherin + Ancestry
-    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='pure-blood' && harry_potter_data[i].house==='Slytherin'))
+    if (harry_potter_data[i] && (harry_potter_data[i].Ancestry==='Pure-blood' && harry_potter_data[i].House==='Slytherin'))
     countPurebloodSlyt++;
 
-    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='half-blood' && harry_potter_data[i].house==='Slytherin'))
+    if (harry_potter_data[i] && (harry_potter_data[i].Ancestry==='Half-blood' && harry_potter_data[i].House==='Slytherin'))
     countHalfbloodSlyt++;
 
-    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='muggleborn' && harry_potter_data[i].house==='Slytherin'))
+    if (harry_potter_data[i] && (harry_potter_data[i].Ancestry==='Muggleborn' && harry_potter_data[i].House==='Slytherin'))
     countMugglebornSlyt++;
 
-    if (harry_potter_data[i] && (harry_potter_data[i].ancestry==='muggle' && harry_potter_data[i].house==='Slytherin'))
+    if (harry_potter_data[i] && (harry_potter_data[i].Ancestry==='Muggle' && harry_potter_data[i].House==='Slytherin'))
     countMuggleSlyt++;
 
   }
 
+
   const Hogwiz = 
-{
+  {
     name: "Hogwarts", children:
     [{name: "Gryffindor", children:[ {name: "Pure-blood", size: countPurebloodGryf},{name: "Half-blood", size: countHalfbloodGryf},{name: "Muggleborn", size: countMugglebornGryf},{name: "Muggle", size: countMuggleGryf}]},
      {name: "Hufflepuff", children:[ {name: "Pure-blood", size: countPurebloodHuff},{name: "Half-blood", size: countHalfbloodHuff},{name: "Muggleborn", size: countMugglebornHuff},{name: "Muggle", size: countMuggleHuff}]},
      {name: "Ravenclaw", children: [ {name: "Pure-blood", size: countPurebloodRavc},{name: "Half-blood", size: countHalfbloodRavc},{name: "Muggleborn", size: countMugglebornRavc},{name: "Muggle", size: countMuggleRavc}]},
      {name: "Slytherin", children: [ {name: "Pure-blood", size: countPurebloodSlyt},{name: "Half-blood", size: countHalfbloodSlyt},{name: "Muggleborn", size: countMugglebornSlyt},{name: "Muggle", size: countMuggleSlyt}]}]
-}
+  }
+
+  console.log(Hogwiz);
 
   const chart = Pack(Hogwiz, {
     value: d => d.size, // size of each node (file); null for internal nodes (folders)
     label: (d, n) => [...d.name.split(/(?=[A-Z][a-z])/g), n.value.toLocaleString("en")].join("\n"),
     title: (d, n) => `${n.ancestors().reverse().map(({data: d}) => d.name).join(".")}\n${n.value.toLocaleString("en")}`,
-    link: (d, n) => n.children,
+    // link: (d, n) => n.children,
     //   ? `https://github.com/prefuse/Flare/tree/master/flare/src/${n.ancestors().reverse().map(d => d.data.name).join("/")}`
     //   : `https://github.com/prefuse/Flare/blob/master/flare/src/${n.ancestors().reverse().map(d => d.data.name).join("/")}.as`,
-    width: 1152,
-    height: 1152
+    width: 1000,
+    height: 1000
   })
 
   // Copyright 2021 Observable, Inc.
@@ -158,9 +125,9 @@ const CirclePacking = ({harry_potter_data}) =>{
     marginBottom = margin, // bottom margin, in pixels
     marginLeft = margin, // left margin, in pixels
     padding = 3, // separation between circles
-    fill = "#ddd", // fill for leaf circles
+    fill = "#FFF175", // fill for leaf circles
     fillOpacity, // fill opacity for leaf circles
-    stroke = "#bbb", // stroke for internal circles
+    stroke = "white", // stroke for internal circles
     strokeWidth, // stroke width for internal circles
     strokeOpacity, // stroke opacity for internal circles
   } = {}) {
@@ -205,12 +172,12 @@ const CirclePacking = ({harry_potter_data}) =>{
     const node = svg.selectAll("a")
       .data(descendants)
       .join("a")
-        .attr("xlink:href", link == null ? null : (d, i) => link(d.data, d))
-        .attr("target", link == null ? null : linkTarget)
+        // .attr("xlink:href", link == null ? null : (d, i) => link(d.data, d))
+        // .attr("target", link == null ? null : linkTarget)
         .attr("transform", d => `translate(${d.x},${d.y})`);
 
     node.append("circle")
-        .attr("fill", d => d.children ? "#fff" : fill)
+        .attr("fill", d => d.children ? "black" : fill)
         .attr("fill-opacity", d => d.children ? null : fillOpacity)
         .attr("stroke", d => d.children ? stroke : null)
         .attr("stroke-width", d => d.children ? strokeWidth : null)
