@@ -99,8 +99,8 @@ const CirclePacking = ({harry_potter_data}) =>{
     link: (d, n) => n.children,
     //   ? `https://github.com/prefuse/Flare/tree/master/flare/src/${n.ancestors().reverse().map(d => d.data.name).join("/")}`
     //   : `https://github.com/prefuse/Flare/blob/master/flare/src/${n.ancestors().reverse().map(d => d.data.name).join("/")}.as`,
-    width: 1152,
-    height: 1152
+    width: 1000,
+    height: 1000
   })
 
   // Copyright 2021 Observable, Inc.
@@ -125,9 +125,9 @@ const CirclePacking = ({harry_potter_data}) =>{
     marginBottom = margin, // bottom margin, in pixels
     marginLeft = margin, // left margin, in pixels
     padding = 3, // separation between circles
-    fill = "#ddd", // fill for leaf circles
+    fill = "#FFF175", // fill for leaf circles
     fillOpacity, // fill opacity for leaf circles
-    stroke = "#bbb", // stroke for internal circles
+    stroke = "white", // stroke for internal circles
     strokeWidth, // stroke width for internal circles
     strokeOpacity, // stroke opacity for internal circles
   } = {}) {
@@ -177,7 +177,7 @@ const CirclePacking = ({harry_potter_data}) =>{
         .attr("transform", d => `translate(${d.x},${d.y})`);
 
     node.append("circle")
-        .attr("fill", d => d.children ? "#fff" : fill)
+        .attr("fill", d => d.children ? "black" : fill)
         .attr("fill-opacity", d => d.children ? null : fillOpacity)
         .attr("stroke", d => d.children ? stroke : null)
         .attr("stroke-width", d => d.children ? strokeWidth : null)
