@@ -8,16 +8,16 @@ import CirclePacking from "./CirclePacking";
 const Homepage = () =>{
 
     // //state of this component
-    // const [data,setData] = useState([]);
+    const [data,setData] = useState([]);
 
     // //component did mount
-    // useEffect(()=>{
-    // (async() =>{
+    useEffect(()=>{
+    (async() =>{
     // const data =  await getHarryPotterData();
-    // setData(data);
-    // })()
+    setData(data_test);
+    })()
         
-    // },[]);
+    },[]);
 
     // // //get data from api
     // // async function getHarryPotterData() 
@@ -27,7 +27,7 @@ const Homepage = () =>{
     // //     return response.json();
     // // }
 
-    const data = 
+    const data_test = 
     [
         {
             Name: 'Harry Potter',
