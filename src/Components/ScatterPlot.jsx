@@ -185,12 +185,12 @@ const ScatterPlot = ({harry_potter_data}) =>{
   xLabel: "Number of Students in Hogwarts Houses →",
   yLabel: "↑ Number of female wizards",
   stroke: "steelblue",
-  width: 500,
-  height: 600
+  width: 1000,
+  height: 500
   });
 
   return(
-    <div>
+    <div className="bg-theme-yellow px-20 py-20">
       <svg ref={d3ref} />
     </div> 
   )
