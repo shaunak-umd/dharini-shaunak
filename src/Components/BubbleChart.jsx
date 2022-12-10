@@ -113,16 +113,16 @@ function d3BubbleChart(data, {
 
   let colour_mapping = new Map();
   colour_mapping.set('Orange','#ffb04c');
-  colour_mapping.set('Grey','#bdbdbd');
-  colour_mapping.set('Black','#595959');
+  colour_mapping.set('Grey','#c1d5e0');
+  colour_mapping.set('Black','#607d8b');
   colour_mapping.set('Red','#ef5350');
   colour_mapping.set('Amber','#fbc02d');
   colour_mapping.set('Yellowish','#fff176');
-  colour_mapping.set('Brown','#8d6e63');
-  colour_mapping.set('Green','#9ccc65');
+  colour_mapping.set('Brown','#a0877e');
+  colour_mapping.set('Green','#81c784');
   colour_mapping.set('Hazel','#c1a14d');
-  colour_mapping.set('Pale, silvery','#f5f5f5');
-  colour_mapping.set('Blue','#61c6ff');
+  colour_mapping.set('Pale, silvery','#ffffff');
+  colour_mapping.set('Blue','#4ED6FF');
   colour_mapping.set('Yellow','#fff9c4');
   colour_mapping.set('White','#fafafa');
   colour_mapping.set('Dark','#757575');
