@@ -96,7 +96,7 @@ const CirclePacking = ({harry_potter_data}) =>{
     value: d => d.size, // size of each node (file); null for internal nodes (folders)
     label: (d, n) => [...d.name.split(/(?=[A-Z][a-z])/g), n.value.toLocaleString("en")].join("\n"),
     title: (d, n) => `${n.ancestors().reverse().map(({data: d}) => d.name).join(".")}\n${n.value.toLocaleString("en")}`,
-    link: (d, n) => n.children,
+    // link: (d, n) => n.children,
     //   ? `https://github.com/prefuse/Flare/tree/master/flare/src/${n.ancestors().reverse().map(d => d.data.name).join("/")}`
     //   : `https://github.com/prefuse/Flare/blob/master/flare/src/${n.ancestors().reverse().map(d => d.data.name).join("/")}.as`,
     width: 1000,
@@ -172,8 +172,8 @@ const CirclePacking = ({harry_potter_data}) =>{
     const node = svg.selectAll("a")
       .data(descendants)
       .join("a")
-        .attr("xlink:href", link == null ? null : (d, i) => link(d.data, d))
-        .attr("target", link == null ? null : linkTarget)
+        // .attr("xlink:href", link == null ? null : (d, i) => link(d.data, d))
+        // .attr("target", link == null ? null : linkTarget)
         .attr("transform", d => `translate(${d.x},${d.y})`);
 
     node.append("circle")
