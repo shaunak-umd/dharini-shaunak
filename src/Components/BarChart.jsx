@@ -189,13 +189,13 @@ const d3BarChart = (data, {
     // xDomain: d3.groupSort(barChartData, ([d]) => -d.Count, d => d.Month), // sort by descending frequency
     // yFormat: "%",
     yLabel: "↑ Frequency",
-    width: 500,
+    width: 1000,
     height: 500,
-    color: "blue"
+    color: "black"
   });
   
     return(
-        <div>
+        <div className="bg-theme-yellow px-20 py-20">
           <svg ref={d3ref} />
         </div>
     )
